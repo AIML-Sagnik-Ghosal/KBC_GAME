@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>KBC</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Function to update the countdown
+        function updateCountdown1() {
+            $.get("/time", function(data) {
+            if(data>0){$(".timer").text(data);}
+            else{
+                $(".timer").text(data);
+                alert("Time Out!");
+                window.location.href='/';
+        }
+                
+            });
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown1, 1000);
+    </script>
+    <script>
+        function help(){
+            if (confirm("Press ok to use the help!")) {
+                txt = "You pressed OK!";
+            } 
+            else {
+                window.history.back();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="{{ url_for('static',filename='image/image.png') }}" alt="KBC">
+        </div>
+        <div class="price-sec">
+            <div class="price">
+                <p>{{price}}</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="ques main">
+            <div class="question">
+                <p>{{q}}</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="time">
+                <div class="timer">--</div>
+            </div>
+            <div class="option">
+                {% for o in os %}
+                    <a href="/done/{{o}}/{{no}}"><div class="o o1"><p>{{o}}</p></div></a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="help main ques">
+            <a href="/h1/{{no}}" onclick="help()"><div class="h o h1"><p>50:50</p></div></a>
+            <a href="/h2/{{no}}"><div class="h o h2"><p>Expert</p></div></a>
+            <a href="/h3/{{no}}"><div class="h o h3"><p>2x</p></div></a>
+            <a href="/h4/{{no}}"><div class="h o h4"><p>Flip</p></div></a>
+        </div>
+    </main>
+    <footer class="main">
+        <p>Thank You! For Playing KBC</p>
+    </footer>
+</body>
+
+</html>
