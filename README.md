@@ -68,6 +68,7 @@ The app fetches data from 'the-trivia-api.com' API in the following format:
   "isNiche": false
 }
 ```
+---
 ##Question: The question field is used to form the quiz question.
 ##Options: The correctAnswer and incorrectAnswers fields are used to form the multiple-choice options.
 
