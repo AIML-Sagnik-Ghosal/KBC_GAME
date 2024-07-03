@@ -1,4 +1,3 @@
-# KBC_GAME
 # KBC Quiz App
 
 ## Overview
