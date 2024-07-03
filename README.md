@@ -68,16 +68,16 @@ The app fetches data from 'the-trivia-api.com' API in the following format:
   "isNiche": false
 }
 ```
--**Question:** The question field is used to form the quiz question.
--**Options:** The correctAnswer and incorrectAnswers fields are used to form the multiple-choice options.
+- **Question:** The question field is used to form the quiz question.
+- **Options:** The correctAnswer and incorrectAnswers fields are used to form the multiple-choice options.
 
 ### Question Example
--**Question:** Which author wrote 'On the Origin of Species'?
--**Options**:
---**Charles Darwin**
---**Percy Bysshe Shelley**
---**H. Rider Haggard**
---**Robert Louis Stevenson**
+- **Question:** Which author wrote 'On the Origin of Species'?
+- **Options**:
+  - **Charles Darwin**
+  - **Percy Bysshe Shelley**
+  - **H. Rider Haggard**
+  - **Robert Louis Stevenson**
 
 ## Scope of Improvement
 - **Database Integration**: Build a database to store user data such as name, preferences, and highest score.
