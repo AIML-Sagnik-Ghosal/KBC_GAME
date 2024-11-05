@@ -170,4 +170,4 @@ def take_kbc_data1():
 	'₹10,000/-','₹5,000/-','₹2,500/-','₹1,000/-']
 if __name__ == "__main__":
 	countdown()
-	app.run(debug=False)
+	app.run(debug=False,host='0.0.0.0')
